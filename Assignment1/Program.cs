@@ -10,9 +10,9 @@ class Patterns
             for (int j = 1; j <= n; j++)
             {
                 if (i == 1 || i == n || j == 1 || j == n)
-                    Console.Write("*");
+                    Console.Write("* ");
                 else
-                    Console.Write(" ");
+                    Console.Write("  ");
             }
             Console.WriteLine();
         }
@@ -295,9 +295,9 @@ class Patterns
     }
 
     // Pascal's Triangle
-    static void PascalsTriangle()
+    static void PascalsTriangle(int N)
     {
-        int N = 4;
+        
         for (int i = 1; i <= N; i++)
         {
             int b = 1;
@@ -317,8 +317,11 @@ class Patterns
 
     // Main method
     static void Main(string[] args)
+
     {
-        int n = 6; 
+        Console.WriteLine("Enter a number");
+        int n = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(n);
 
         
         SquareHollowPattern(n);
@@ -349,6 +352,6 @@ class Patterns
         Console.WriteLine();
         HollowHourglassPattern(n);
         Console.WriteLine();
-        PascalsTriangle();
+        PascalsTriangle(n);
     }
 }
